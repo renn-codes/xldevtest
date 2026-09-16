@@ -182,8 +182,8 @@ if(CMAKE_SIZEOF_VOID_P EQUAL 4)
             "${CMAKE_CURRENT_SOURCE_DIR}/include"
             "${CMAKE_CURRENT_SOURCE_DIR}/src")
         # An extension's own src/ is its own include root for its self-contained internal headers
-        # (e.g. wxl-modern-render's own "core/Logger.hpp", "gpu/Effect.hpp") -- distinct from the core
-        # SDK's src/ added above, and only added when the extension actually has such a tree.
+        # (e.g. wxl-modern-render's own "gpu/Effect.hpp") -- distinct from the core SDK's src/ added
+        # above, and only added when the extension actually has such a tree.
         if(IS_DIRECTORY "${wxl_ext_dir}/src")
             target_include_directories(${wxl_ext_name} PRIVATE "${wxl_ext_dir}/src")
         endif()
@@ -191,6 +191,12 @@ if(CMAKE_SIZEOF_VOID_P EQUAL 4)
         # the target rather than in a source file: an extension that forgets it still builds, and fails
         # only at load with "exports no WXL_Query/WXL_Load".
         target_compile_definitions(${wxl_ext_name} PRIVATE ${WXL_DEFS} WXL_EXTENSION)
+
+        # An extension that needs build config beyond a plain SHARED library -- extra include
+        # directories (e.g. a vendored library's own root), extra link libraries (wxl-modern-render's
+        # module.cmake links d3d12 for its root-signature serializer) -- declares it in its own
+        # extensions/<name>/module.cmake, run against the now-created ${wxl_ext_name} target.
+        include("${wxl_ext_dir}/module.cmake" OPTIONAL)
 
         if(CLIENT_PATH)
             add_custom_command(TARGET ${wxl_ext_name} POST_BUILD
