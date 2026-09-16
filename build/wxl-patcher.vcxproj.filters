@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="W:\local\wxl-core-git\src\patcher\GlueUnlock.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="W:\local\wxl-core-git\src\patcher\Main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="W:\local\wxl-core-git\src\patcher\NamedPatchArchives.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="W:\local\wxl-core-git\src\patcher\PatchScript.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="W:\local\wxl-core-git\src\patcher\PeImage.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="W:\local\wxl-core-git\src\common\Config.cpp">
+      <Filter>src\common</Filter>
+    </ClCompile>
+    <ClCompile Include="W:\local\wxl-core-git\src\common\Log.cpp">
+      <Filter>src\common</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="W:\local\wxl-core-git\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{2D440387-E479-39EA-BF18-A68365586FAA}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{BFF1A429-2935-35F7-B9EE-7840B8874920}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\common">
+      <UniqueIdentifier>{5AE3E8A9-8131-3EBC-955C-0787ADD7B119}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

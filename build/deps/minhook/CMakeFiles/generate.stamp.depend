@@ -1,0 +1,7 @@
+# CMake generation dependency list for this directory.
+C:/Program Files/CMake/share/cmake-4.4/Modules/BasicConfigVersion-AnyNewerVersion.cmake.in
+C:/Program Files/CMake/share/cmake-4.4/Modules/CMakePackageConfigHelpers.cmake
+C:/Program Files/CMake/share/cmake-4.4/Modules/WriteBasicConfigVersionFile.cmake
+W:/local/wxl-core-git/build/CMakeFiles/cmake.verify_globs
+W:/local/wxl-core-git/deps/minhook/CMakeLists.txt
+W:/local/wxl-core-git/deps/minhook/cmake/minhook-config.cmake.in

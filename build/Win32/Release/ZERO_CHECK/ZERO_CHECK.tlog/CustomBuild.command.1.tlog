@@ -1,0 +1,10 @@
+^W:\LOCAL\WXL-CORE-GIT\BUILD\CMAKEFILES\10B75D22BB5720AE40403D77A318BCF0\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SW:/local/wxl-core-git -BW:/local/wxl-core-git/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file W:/local/wxl-core-git/build/WarcraftXL.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

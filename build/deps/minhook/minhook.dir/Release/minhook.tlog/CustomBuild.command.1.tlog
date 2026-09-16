@@ -1,0 +1,10 @@
+^W:\LOCAL\WXL-CORE-GIT\DEPS\MINHOOK\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SW:/local/wxl-core-git -BW:/local/wxl-core-git/build --check-stamp-file W:/local/wxl-core-git/build/deps/minhook/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

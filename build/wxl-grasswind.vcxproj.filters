@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="W:\local\wxl-core-git\extensions\wxl-grasswind\src\ExtensionApi.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="W:\local\wxl-core-git\extensions\wxl-grasswind\src\GrassWind.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="W:\local\wxl-core-git\extensions\wxl-grasswind\src\Module.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="W:\local\wxl-core-git\src\game\Gfx.cpp">
+      <Filter>src\game</Filter>
+    </ClCompile>
+    <ClCompile Include="W:\local\wxl-core-git\src\game\Gx.cpp">
+      <Filter>src\game</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="W:\local\wxl-core-git\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{2D440387-E479-39EA-BF18-A68365586FAA}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{BFF1A429-2935-35F7-B9EE-7840B8874920}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\game">
+      <UniqueIdentifier>{E0C9EC06-16EC-3CFB-A3D8-3EDB73288EC2}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

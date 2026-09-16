@@ -1,0 +1,8 @@
+{
+	"InstallScripts" : 
+	[
+		"W:/local/wxl-core-git/build/cmake_install.cmake",
+		"W:/local/wxl-core-git/build/deps/minhook/cmake_install.cmake"
+	],
+	"Parallel" : false
+}
