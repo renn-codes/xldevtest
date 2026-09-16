@@ -1,0 +1,30 @@
+{
+  "manifest": 1,
+  "extension": {
+    "id": "wxl-runtime",
+    "version": "1.1.0",
+    "abi": "1.1",
+    "entry": "wxl-runtime.dll",
+    "assets": [],
+    "requires": {},
+    "conflicts": [],
+    "hooks": [
+      { "target": "Lua.ValidateFunctionPointer" },
+      { "target": "Network.ProcessMessage" }
+    ]
+  },
+  "deploy": {
+    "mode": "release",
+    "match": "wxl-runtime-v*.zip"
+  },
+  "listing": {
+    "title": "WXL Runtime",
+    "tagline": "Shared FrameScript and custom-packet services for WarcraftXL extensions.",
+    "description": "store/description.md",
+    "gallery": [],
+    "categories": ["framework", "compatibility"],
+    "accent": "#4f8fc9"
+  },
+  "license": "GPL-3.0-or-later",
+  "signature": null
+}

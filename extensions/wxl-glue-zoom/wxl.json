@@ -1,0 +1,38 @@
+{
+  "manifest": 1,
+
+  "extension": {
+    "id": "wxl-glue-zoom",
+    "version": "1.0.0",
+    "abi": "1.1",
+    "entry": "wxl-glue-zoom.dll",
+    "assets": [],
+    "requires": {},
+    "conflicts": [],
+
+    "hooks": [
+      { "target": "M2.DrawBatch" },
+      { "target": "GlueZoom.SetupWorldProjection" },
+      { "target": "GlueZoom.DrawIndexedPrimitive" }
+    ]
+  },
+
+  "deploy": {
+    "mode": "release",
+    "match": "*.dll"
+  },
+
+  "listing": {
+    "title": "Glue Zoom",
+    "tagline": "Mouse-wheel zoom with per-race head framing on the character customization screen.",
+    "description": "store/description.md",
+    "gallery": [
+      "store/gallery/preview.gif",
+    ],
+    "categories": ["interface", "ui", "quality-of-life"],
+    "accent": "#7aa2f7"
+  },
+
+  "license": "GPL-3.0-or-later",
+  "signature": null
+}
