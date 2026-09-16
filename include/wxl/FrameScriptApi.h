@@ -21,7 +21,7 @@ typedef struct WXL_FrameScriptApi
 
     int(__cdecl* RegisterFunction)(const char* name, WXL_LuaCFunction function);
     int(__cdecl* RegisterScript)(const char* name, const char* source);
-    int(__cdecl* ExecuteCurrent)(const char* name, const char* source);
+    int(__cdecl* Execute)(const char* name, const char* source);
 
     /*
      * Appended in the v1 ABI. Consumers must check structSize before using it so an extension built

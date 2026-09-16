@@ -1,7 +1,0 @@
-W:\local\wxl-core-git\src\patcher\GlueUnlock.cpp;W:\local\wxl-core-git\build\wxl-patcher.dir\Release\GlueUnlock.obj
-W:\local\wxl-core-git\src\patcher\Main.cpp;W:\local\wxl-core-git\build\wxl-patcher.dir\Release\Main.obj
-W:\local\wxl-core-git\src\patcher\NamedPatchArchives.cpp;W:\local\wxl-core-git\build\wxl-patcher.dir\Release\NamedPatchArchives.obj
-W:\local\wxl-core-git\src\patcher\PatchScript.cpp;W:\local\wxl-core-git\build\wxl-patcher.dir\Release\PatchScript.obj
-W:\local\wxl-core-git\src\patcher\PeImage.cpp;W:\local\wxl-core-git\build\wxl-patcher.dir\Release\PeImage.obj
-W:\local\wxl-core-git\src\common\Config.cpp;W:\local\wxl-core-git\build\wxl-patcher.dir\Release\Config.obj
-W:\local\wxl-core-git\src\common\Log.cpp;W:\local\wxl-core-git\build\wxl-patcher.dir\Release\Log.obj
