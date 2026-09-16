@@ -14,8 +14,8 @@
 // You should have received a copy of the GNU General Public License
 // along with this program. If not, see <https://www.gnu.org/licenses/>.
 
-#include "common/Log.hpp"
-#include "engine/events/EventScript.hpp"
+#include "ExtensionApi.hpp"
+#include "wxl/EventScript.hpp"
 #include "game/Camera.hpp"
 #include "gpu/Proxy.hpp"
 #include "runtime/RenderHooks.hpp"
@@ -38,7 +38,7 @@ namespace wxl::scripts::render_modern
     namespace cam = wxl::game::camera;
 
     /** @brief Drives the post-process pipeline once per frame from the live device. */
-    class RenderModernModule : public ev::EventScript
+    class RenderModernModule : public wxl::ext::EventScript
     {
     public:
         RenderModernModule()
@@ -89,7 +89,7 @@ namespace wxl::scripts::render_modern
             bool needDepth = false;
             for (const auto& e : Pipeline::Get().Effects())
                 if (e->Enabled() && e->NeedsDepth()) { needDepth = true; break; }
-            wxl::runtime::render::SetReadableDepthNeeded(needDepth);
+            SetReadableDepthNeeded(needDepth);
 
             IDirect3DDevice9* device = static_cast<IDirect3DDevice9*>(a.device);
             if (!EnsureOn12(device)) return;
@@ -117,7 +117,11 @@ namespace wxl::scripts::render_modern
             WxlD3D12DrainDebug();
         }
     };
+}
 
-    // File-scope instance self-registers its handlers at DLL load via the EventScript ctor.
-    RenderModernModule g_renderModernModule;
+bool wxl_modern_render::InstallRenderModernModule()
+{
+    // wxl::ext::EventScript::Bind(api) must already have run (Module.cpp does this before calling in).
+    static wxl::scripts::render_modern::RenderModernModule instance;
+    return true;
 }

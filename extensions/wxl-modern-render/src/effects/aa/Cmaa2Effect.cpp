@@ -17,7 +17,7 @@
 #include "Cmaa2Effect.hpp"
 
 #include "gpu/Framework.hpp"
-#include "common/Log.hpp"
+#include "ExtensionApi.hpp"
 
 // Vendored CMAA2 (Intel, Apache-2.0), embedded as compiler-safe chunks.
 #include "../../../vendor/cmaa2/CMAA2_embed.hpp"

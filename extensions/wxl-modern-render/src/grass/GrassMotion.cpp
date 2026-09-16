@@ -16,9 +16,8 @@
 
 #include "grass/GrassSettings.hpp"
 
-#include "engine/hook/Hook.hpp"
-#include "common/Log.hpp"
-#include "engine/events/EventScript.hpp"
+#include "ExtensionApi.hpp"
+#include "wxl/EventScript.hpp"
 #include "game/Camera.hpp"
 #include "game/Gx.hpp"
 #include "game/World.hpp"
@@ -427,10 +426,8 @@ namespace wxl::scripts::render_modern::grass
 
             if (!g_origChunkUpload)
             {
-                if (wxl::hook::Install("GrassChunkUpload", geoff::kChunkConstantUpload,
-                                       reinterpret_cast<void*>(&hkChunkUpload),
-                                       reinterpret_cast<void**>(&g_origChunkUpload)))
-                    wxl::hook::EnableAll();
+                wxl_modern_render::HookAttach("GrassChunkUpload", geoff::kChunkConstantUpload,
+                                              &hkChunkUpload, &g_origChunkUpload);
             }
 
             if (!dev) return;
@@ -461,7 +458,7 @@ namespace wxl::scripts::render_modern::grass
     const PhysicsSettings& ActivePhysics() { return g_physics; }
 
     /** @brief Keeps the hooks installed and re-arms the per-frame constant refresh. */
-    class GrassMotion : public ev::EventScript
+    class GrassMotion : public wxl::ext::EventScript
     {
     public:
         GrassMotion()
@@ -488,7 +485,11 @@ namespace wxl::scripts::render_modern::grass
             ResetCapture();
         }
     };
+}
 
-    // File-scope instance self-registers its handlers at DLL load via the EventScript ctor.
-    GrassMotion g_grassMotion;
+bool wxl_modern_render::InstallGrassMotion()
+{
+    // wxl::ext::EventScript::Bind(api) must already have run (Module.cpp does this before calling in).
+    static wxl::scripts::render_modern::grass::GrassMotion instance;
+    return true;
 }
