@@ -16,7 +16,7 @@
 
 #include "Framework.hpp"
 
-#include "core/Logger.hpp"
+#include "common/Log.hpp"
 
 #include <windows.h>
 #include <d3dcompiler.h>

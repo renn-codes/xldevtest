@@ -79,6 +79,7 @@
 #include "ExtensionApi.hpp"
 
 #include "engine/events/Event.hpp"
+#include "engine/hook/Hook.hpp"
 #include "game/Binding.hpp"
 #include "game/World.hpp"
 #include "offsets/game/Unit.hpp"
@@ -1025,20 +1026,20 @@ namespace wxl_quest_marker
     void InstallModule()
     {
         const bool projOk =
-            wxl::core::hook::Install("selcircle-poc::projecttex2d", kProjectTex2d, &HkProjectTex2d, &g_origProjectTex2d);
+            wxl::hook::Install("selcircle-poc::projecttex2d", kProjectTex2d, &HkProjectTex2d, &g_origProjectTex2d);
         // No-selection quest trigger: RenderAutoTrackCursor (the tracked-quest objective
         // cursor) fires per frame while a quest is selected — its invocation re-arms the
         // quest sweep with no unit targeted.
         const bool autoOk =
-            wxl::core::hook::Install("selcircle-poc::autotrack", kRenderAutoTrackCursor, &HkRenderAutoTrack, &g_origRenderAutoTrack);
+            wxl::hook::Install("selcircle-poc::autotrack", kRenderAutoTrackCursor, &HkRenderAutoTrack, &g_origRenderAutoTrack);
         // Unit GUID cache: POST hook on GetObjectByGuid — the proven kill-highlight mechanism
         // for learning which units the client has resolved (the ObjectManager hash walk was
         // DISPROVEN for this client; see the cache comment above).
         const bool objOk =
-            wxl::core::hook::Install("selcircle-poc::getobject", off::kGetObjectByGuid, &HkGetObjectByGuid, &g_origGetObject);
-        if (projOk)  wxl::core::hook::Enable(kProjectTex2d);
-        if (autoOk)  wxl::core::hook::Enable(kRenderAutoTrackCursor);
-        if (objOk)   wxl::core::hook::Enable(off::kGetObjectByGuid);
+            wxl::hook::Install("selcircle-poc::getobject", off::kGetObjectByGuid, &HkGetObjectByGuid, &g_origGetObject);
+        if (projOk)  wxl::hook::Enable(kProjectTex2d);
+        if (autoOk)  wxl::hook::Enable(kRenderAutoTrackCursor);
+        if (objOk)   wxl::hook::Enable(off::kGetObjectByGuid);
 
         // Per-frame visible-objects enumeration (the engine's own visible list): cdecl
         // int(cb, param), callback int(cb)(guidLo, guidHi, param) -> 0 stops.

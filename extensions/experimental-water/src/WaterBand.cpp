@@ -94,7 +94,28 @@ namespace wxl::scripts::waterband
         if (!EnsureResources(dev)) return;
         BandPass(dev);
     }
+}
 
-    // Self-registration: the file-scope instance binds its handler at DLL load via the EventScript ctor.
-    WaterBand g_waterBand;
+const WXL_PluginInfo* __cdecl WXL_Query(void)
+{
+    static const WXL_PluginInfo info = {
+        sizeof(WXL_PluginInfo),
+        WXL_API_VERSION,
+        "WaterBand",
+        1,
+        WXL_CLIENT_BUILD,
+    };
+    return &info;
+}
+
+int __cdecl WXL_Load(const WXL_Api* api)
+{
+    if (!api || api->apiVersion != WXL_API_VERSION) return 0;
+
+    // Ahead of the constructor, which is where the handler binds.
+    wxl::ext::EventScript::Bind(api);
+    static wxl::scripts::waterband::WaterBand waterBand;
+
+    api->Log(WXL_LOG_INFO, "WaterBand", "cheap full-frame reflection band active");
+    return 1;
 }

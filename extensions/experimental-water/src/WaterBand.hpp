@@ -16,9 +16,8 @@
 
 #pragma once
 
-#include "events/Event.hpp"
-#include "events/EventScript.hpp"
-#include "game/gx/Gx.hpp"
+#include "wxl/EventScript.hpp"
+#include "game/Gx.hpp"
 
 // Fakes a water reflection with zero depth/mask information: copies the already-rendered scene,
 // flips it vertically, and blends it back in over a fixed band near the bottom of the screen.
@@ -29,7 +28,7 @@
 // typically frames water in practice.
 namespace wxl::scripts::waterband
 {
-    class WaterBand final : public events::EventScript
+    class WaterBand final : public wxl::ext::EventScript
     {
     public:
         WaterBand();  // binds the event handler
