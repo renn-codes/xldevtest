@@ -193,7 +193,10 @@ namespace
         }
     }
 
-    void __thiscall ProcessMessage(void* client, int time, native::ClientPacket* packet, int unused)
+    // __fastcall with an unused edx slot emulates __thiscall on a free function (MSVC only allows
+    // __thiscall on an actual member function) -- client is "this" in ECX, the rest go on the stack.
+    void __fastcall ProcessMessage(void* client, void* /*edx*/, int time,
+                                    native::ClientPacket* packet, int unused)
     {
         if (packet && packet->buffer && packet->read <= packet->size &&
             packet->size - packet->read >= sizeof(uint16_t))
