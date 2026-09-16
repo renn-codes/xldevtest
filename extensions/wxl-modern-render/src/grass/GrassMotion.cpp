@@ -16,12 +16,12 @@
 
 #include "grass/GrassSettings.hpp"
 
-#include "core/Hook.hpp"
-#include "core/Logger.hpp"
-#include "events/EventScript.hpp"
-#include "game/camera/Camera.hpp"
-#include "game/gx/Gx.hpp"
-#include "game/world/World.hpp"
+#include "engine/hook/Hook.hpp"
+#include "common/Log.hpp"
+#include "engine/events/EventScript.hpp"
+#include "game/Camera.hpp"
+#include "game/Gx.hpp"
+#include "game/World.hpp"
 #include "offsets/game/GroundEffect.hpp"
 
 #include <windows.h>
@@ -274,7 +274,7 @@ namespace wxl::scripts::render_modern::grass
         void WriteFrameConstants()
         {
             float camPos[3];
-            cam::Position(camPos);
+            cam::GetPosition(camPos);
 
             float player[3];
             g_playerValid = ReadPlayer(player);
@@ -427,10 +427,10 @@ namespace wxl::scripts::render_modern::grass
 
             if (!g_origChunkUpload)
             {
-                if (wxl::core::hook::Install("GrassChunkUpload", geoff::kChunkConstantUpload,
-                                             reinterpret_cast<void*>(&hkChunkUpload),
-                                             reinterpret_cast<void**>(&g_origChunkUpload)))
-                    wxl::core::hook::EnableAll();
+                if (wxl::hook::Install("GrassChunkUpload", geoff::kChunkConstantUpload,
+                                       reinterpret_cast<void*>(&hkChunkUpload),
+                                       reinterpret_cast<void**>(&g_origChunkUpload)))
+                    wxl::hook::EnableAll();
             }
 
             if (!dev) return;

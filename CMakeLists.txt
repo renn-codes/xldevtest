@@ -161,7 +161,12 @@ if(CMAKE_SIZEOF_VOID_P EQUAL 4)
         # module for a client extension -- built into an AzerothCore checkout's own CMake project, not
         # this one. They target AzerothCore headers (Group.h, etc.) that don't exist here, so the
         # client-side DLL glob must not sweep them in.
-        list(FILTER WXL_EXT_SRC EXCLUDE REGEX "/server/")
+        #
+        # vendor/ trees hold upstream third-party sources kept unmodified for reference (e.g.
+        # wxl-modern-render/vendor/cmaa2's own vaCMAA2DX12.cpp, the upstream demo integration for a
+        # rendering framework this project doesn't vendor) -- consumed piecemeal via specific #include
+        # of individual headers, not compiled as their own translation units.
+        list(FILTER WXL_EXT_SRC EXCLUDE REGEX "/server/|/vendor/")
 
         if(NOT WXL_EXT_SRC)
             continue()

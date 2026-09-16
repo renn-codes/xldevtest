@@ -16,9 +16,9 @@
 
 #pragma once
 
-#include "events/Event.hpp"
-#include "events/EventScript.hpp"
-#include "game/gx/Gx.hpp"
+#include "engine/events/Event.hpp"
+#include "engine/events/EventScript.hpp"
+#include "game/Gx.hpp"
 
 // Fakes a water reflection with zero depth/mask information: copies the already-rendered scene,
 // flips it vertically, and blends it back in over a fixed band near the bottom of the screen.

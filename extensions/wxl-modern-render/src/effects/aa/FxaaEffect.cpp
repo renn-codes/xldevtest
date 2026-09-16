@@ -17,7 +17,7 @@
 #include "FxaaEffect.hpp"
 
 #include "gpu/Framework.hpp"
-#include "core/Logger.hpp"
+#include "common/Log.hpp"
 
 // Vendored FXAA 3.11 (NVIDIA, BSD). Embedded as compiler-safe chunks because the header exceeds MSVC's
 // string-literal limits. Configuration macros precede it; the wrapper entry point follows it.

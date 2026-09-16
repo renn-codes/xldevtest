@@ -16,7 +16,7 @@
 
 #include "effects/ao/AoEffect.hpp"
 #include "gpu/Framework.hpp"
-#include "core/Logger.hpp"
+#include "common/Log.hpp"
 
 #include "imgui.h"
 

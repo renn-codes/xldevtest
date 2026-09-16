@@ -14,9 +14,9 @@
 // You should have received a copy of the GNU General Public License
 // along with this program. If not, see <https://www.gnu.org/licenses/>.
 
-#include "core/Logger.hpp"
-#include "events/EventScript.hpp"
-#include "game/camera/Camera.hpp"
+#include "common/Log.hpp"
+#include "engine/events/EventScript.hpp"
+#include "game/Camera.hpp"
 #include "gpu/Proxy.hpp"
 #include "runtime/RenderHooks.hpp"
 
@@ -111,7 +111,7 @@ namespace wxl::scripts::render_modern
             IDirect3DResource9* depth = static_cast<IDirect3DResource9*>(a.depthSource);
             Pipeline::Get().Frame(on12_, WxlD3D12Device(),
                                   static_cast<IDirect3DResource9*>(bb), superSample, depth,
-                                  a.proj ? a.proj : cam::Projection(), cam::View());
+                                  a.proj ? a.proj : cam::GetProjection(), cam::GetView());
 
             bb->Release();
             WxlD3D12DrainDebug();

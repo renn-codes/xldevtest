@@ -21,7 +21,7 @@
 #include "effects/aa/FxaaEffect.hpp"
 #include "effects/aa/SmaaEffect.hpp"
 #include "effects/aa/Cmaa2Effect.hpp"
-#include "core/Logger.hpp"
+#include "common/Log.hpp"
 
 #include <windows.h>
 #include <d3d9.h>
