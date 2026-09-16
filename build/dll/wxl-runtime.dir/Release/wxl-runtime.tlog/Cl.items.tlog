@@ -1,0 +1,6 @@
+W:\local\wxl-core-git\extensions\wxl-runtime\src\ExtensionApi.cpp;W:\local\wxl-core-git\build\dll\wxl-runtime.dir\Release\ExtensionApi.obj
+W:\local\wxl-core-git\extensions\wxl-runtime\src\FrameScriptBridge.cpp;W:\local\wxl-core-git\build\dll\wxl-runtime.dir\Release\FrameScriptBridge.obj
+W:\local\wxl-core-git\extensions\wxl-runtime\src\Module.cpp;W:\local\wxl-core-git\build\dll\wxl-runtime.dir\Release\Module.obj
+W:\local\wxl-core-git\extensions\wxl-runtime\src\NetworkBridge.cpp;W:\local\wxl-core-git\build\dll\wxl-runtime.dir\Release\NetworkBridge.obj
+W:\local\wxl-core-git\src\game\Gfx.cpp;W:\local\wxl-core-git\build\dll\wxl-runtime.dir\Release\Gfx.obj
+W:\local\wxl-core-git\src\game\Gx.cpp;W:\local\wxl-core-git\build\dll\wxl-runtime.dir\Release\Gx.obj

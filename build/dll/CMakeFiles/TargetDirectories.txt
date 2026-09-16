@@ -1,0 +1,15 @@
+W:/local/wxl-core-git/build/dll/CMakeFiles/WarcraftXL.dir
+W:/local/wxl-core-git/build/dll/CMakeFiles/wxl-patcher.dir
+W:/local/wxl-core-git/build/dll/CMakeFiles/d3d9.dir
+W:/local/wxl-core-git/build/dll/CMakeFiles/experimental-water.dir
+W:/local/wxl-core-git/build/dll/CMakeFiles/wxl-grasswind.dir
+W:/local/wxl-core-git/build/dll/CMakeFiles/wxl-modern-render.dir
+W:/local/wxl-core-git/build/dll/CMakeFiles/wxl-radial-ping.dir
+W:/local/wxl-core-git/build/dll/CMakeFiles/wxl-runtime.dir
+W:/local/wxl-core-git/build/dll/CMakeFiles/wxl-unit-outline.dir
+W:/local/wxl-core-git/build/dll/CMakeFiles/INSTALL.dir
+W:/local/wxl-core-git/build/dll/CMakeFiles/ALL_BUILD.dir
+W:/local/wxl-core-git/build/dll/CMakeFiles/ZERO_CHECK.dir
+W:/local/wxl-core-git/build/dll/deps/minhook/CMakeFiles/minhook.dir
+W:/local/wxl-core-git/build/dll/deps/minhook/CMakeFiles/INSTALL.dir
+W:/local/wxl-core-git/build/dll/deps/minhook/CMakeFiles/ALL_BUILD.dir

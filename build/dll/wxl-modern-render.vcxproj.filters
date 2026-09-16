@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="W:\local\wxl-core-git\extensions\wxl-modern-render\src\OverlayPanel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="W:\local\wxl-core-git\extensions\wxl-modern-render\src\RenderModernModule.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="W:\local\wxl-core-git\extensions\wxl-modern-render\src\effects\aa\Cmaa2Effect.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="W:\local\wxl-core-git\extensions\wxl-modern-render\src\effects\aa\FxaaEffect.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="W:\local\wxl-core-git\extensions\wxl-modern-render\src\effects\aa\SmaaEffect.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="W:\local\wxl-core-git\extensions\wxl-modern-render\src\effects\ao\AoEffect.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="W:\local\wxl-core-git\extensions\wxl-modern-render\src\gpu\Framework.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="W:\local\wxl-core-git\extensions\wxl-modern-render\src\gpu\Pipeline.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="W:\local\wxl-core-git\extensions\wxl-modern-render\src\grass\GrassMotion.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="W:\local\wxl-core-git\extensions\wxl-modern-render\vendor\cmaa2\vaCMAA2DX12.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="W:\local\wxl-core-git\src\game\Gfx.cpp">
+      <Filter>src\game</Filter>
+    </ClCompile>
+    <ClCompile Include="W:\local\wxl-core-git\src\game\Gx.cpp">
+      <Filter>src\game</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="W:\local\wxl-core-git\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{E5C7D398-8DD2-38DC-812D-34114B6BF593}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{39000653-D5AE-300C-BE9B-E3B5A8F42D65}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\game">
+      <UniqueIdentifier>{C55BFA67-F069-3D46-8B30-3DF3E9C35AB8}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

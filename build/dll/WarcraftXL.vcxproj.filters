@@ -1,0 +1,190 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="W:\local\wxl-core-git\src\client\CGObject_C\Unit.cpp">
+      <Filter>src\client\CGObject_C</Filter>
+    </ClCompile>
+    <ClCompile Include="W:\local\wxl-core-git\src\client\CGxDevice\BlendState.cpp">
+      <Filter>src\client\CGxDevice</Filter>
+    </ClCompile>
+    <ClCompile Include="W:\local\wxl-core-git\src\client\CGxDevice\Textures.cpp">
+      <Filter>src\client\CGxDevice</Filter>
+    </ClCompile>
+    <ClCompile Include="W:\local\wxl-core-git\src\client\CM2Shared\Memory.cpp">
+      <Filter>src\client\CM2Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="W:\local\wxl-core-git\src\client\CMapDoodad\Spawn.cpp">
+      <Filter>src\client\CMapDoodad</Filter>
+    </ClCompile>
+    <ClCompile Include="W:\local\wxl-core-git\src\client\CParticleEmitter2\EmitterBudget.cpp">
+      <Filter>src\client\CParticleEmitter2</Filter>
+    </ClCompile>
+    <ClCompile Include="W:\local\wxl-core-git\src\client\CParticleEmitter2\ZSource.cpp">
+      <Filter>src\client\CParticleEmitter2</Filter>
+    </ClCompile>
+    <ClCompile Include="W:\local\wxl-core-git\src\client\CWorldScene\Phasing.cpp">
+      <Filter>src\client\CWorldScene</Filter>
+    </ClCompile>
+    <ClCompile Include="W:\local\wxl-core-git\src\client\CWorldScene\Render.cpp">
+      <Filter>src\client\CWorldScene</Filter>
+    </ClCompile>
+    <ClCompile Include="W:\local\wxl-core-git\src\client\CWorldScene\World.cpp">
+      <Filter>src\client\CWorldScene</Filter>
+    </ClCompile>
+    <ClCompile Include="W:\local\wxl-core-git\src\client\CharModel\CharModel.cpp">
+      <Filter>src\client\CharModel</Filter>
+    </ClCompile>
+    <ClCompile Include="W:\local\wxl-core-git\src\client\SE2\Sound.cpp">
+      <Filter>src\client\SE2</Filter>
+    </ClCompile>
+    <ClCompile Include="W:\local\wxl-core-git\src\client\SFile\Streaming.cpp">
+      <Filter>src\client\SFile</Filter>
+    </ClCompile>
+    <ClCompile Include="W:\local\wxl-core-git\src\common\Config.cpp">
+      <Filter>src\common</Filter>
+    </ClCompile>
+    <ClCompile Include="W:\local\wxl-core-git\src\common\Log.cpp">
+      <Filter>src\common</Filter>
+    </ClCompile>
+    <ClCompile Include="W:\local\wxl-core-git\src\engine\assets\textures\blp\TextureScratch.cpp">
+      <Filter>src\engine\assets\textures\blp</Filter>
+    </ClCompile>
+    <ClCompile Include="W:\local\wxl-core-git\src\engine\diag\AssetProfile.cpp">
+      <Filter>src\engine\diag</Filter>
+    </ClCompile>
+    <ClCompile Include="W:\local\wxl-core-git\src\engine\events\Event.cpp">
+      <Filter>src\engine\events</Filter>
+    </ClCompile>
+    <ClCompile Include="W:\local\wxl-core-git\src\engine\hook\Hook.cpp">
+      <Filter>src\engine\hook</Filter>
+    </ClCompile>
+    <ClCompile Include="W:\local\wxl-core-git\src\engine\hook\Registry.cpp">
+      <Filter>src\engine\hook</Filter>
+    </ClCompile>
+    <ClCompile Include="W:\local\wxl-core-git\src\engine\input\Input.cpp">
+      <Filter>src\engine\input</Filter>
+    </ClCompile>
+    <ClCompile Include="W:\local\wxl-core-git\src\engine\storage\StorageHook.cpp">
+      <Filter>src\engine\storage</Filter>
+    </ClCompile>
+    <ClCompile Include="W:\local\wxl-core-git\src\engine\ui\ImGuiHost.cpp">
+      <Filter>src\engine\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="W:\local\wxl-core-git\src\game\Gfx.cpp">
+      <Filter>src\game</Filter>
+    </ClCompile>
+    <ClCompile Include="W:\local\wxl-core-git\src\game\Gx.cpp">
+      <Filter>src\game</Filter>
+    </ClCompile>
+    <ClCompile Include="W:\local\wxl-core-git\src\runtime\Extensions.cpp">
+      <Filter>src\runtime</Filter>
+    </ClCompile>
+    <ClCompile Include="W:\local\wxl-core-git\src\runtime\HookPoints.cpp">
+      <Filter>src\runtime</Filter>
+    </ClCompile>
+    <ClCompile Include="W:\local\wxl-core-git\src\runtime\Main.cpp">
+      <Filter>src\runtime</Filter>
+    </ClCompile>
+    <ClCompile Include="W:\local\wxl-core-git\src\runtime\StorageBridge.cpp">
+      <Filter>src\runtime</Filter>
+    </ClCompile>
+    <ClCompile Include="W:\local\wxl-core-git\deps\imgui\imgui.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="W:\local\wxl-core-git\deps\imgui\imgui_draw.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="W:\local\wxl-core-git\deps\imgui\imgui_tables.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="W:\local\wxl-core-git\deps\imgui\imgui_widgets.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="W:\local\wxl-core-git\deps\imgui\backends\imgui_impl_dx9.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="W:\local\wxl-core-git\deps\imgui\backends\imgui_impl_win32.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="W:\local\wxl-core-git\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{E5C7D398-8DD2-38DC-812D-34114B6BF593}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{39000653-D5AE-300C-BE9B-E3B5A8F42D65}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\client">
+      <UniqueIdentifier>{13E10BD5-824C-37E0-837F-2F2A637FCB67}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\client\CGObject_C">
+      <UniqueIdentifier>{3AB28A29-2D51-31A5-85BB-1EF032DFE639}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\client\CGxDevice">
+      <UniqueIdentifier>{9983E696-0669-355E-9206-8D74FF80F391}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\client\CM2Shared">
+      <UniqueIdentifier>{5F0C5C70-6D50-3B82-90F0-6CBA7003D78E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\client\CMapDoodad">
+      <UniqueIdentifier>{3622E0D5-F8ED-30DA-9D55-E513A7C7BCEC}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\client\CParticleEmitter2">
+      <UniqueIdentifier>{6EDEFED3-E349-3548-BF23-348C4D3F4EF0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\client\CWorldScene">
+      <UniqueIdentifier>{65B75BAB-8CE7-3318-9F38-9F051DD243F6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\client\CharModel">
+      <UniqueIdentifier>{D75D4CBC-32BD-37C7-9022-D747E82871EF}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\client\SE2">
+      <UniqueIdentifier>{B242D570-ED7B-3735-AC1E-8FEE69A0A6F5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\client\SFile">
+      <UniqueIdentifier>{7F120EA6-A0E8-3D89-8520-4E3961D50601}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\common">
+      <UniqueIdentifier>{4877A014-0815-3005-A2EA-ED50E58F2601}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\engine">
+      <UniqueIdentifier>{D6758E51-DBFA-324F-9ED9-FEF349FE6880}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\engine\assets">
+      <UniqueIdentifier>{C7572749-C32E-31BA-BF7F-B7E0677BBE8A}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\engine\assets\textures">
+      <UniqueIdentifier>{7C21CB09-B42D-3B7A-A8A3-ACF93C445593}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\engine\assets\textures\blp">
+      <UniqueIdentifier>{C6F6C8A2-A17C-3F9A-B3DD-E2C1245159A7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\engine\diag">
+      <UniqueIdentifier>{955062C5-13C9-3D15-AAEB-68D4A301074D}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\engine\events">
+      <UniqueIdentifier>{3CC2DC8F-322D-3C5F-8B6D-130EC2834903}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\engine\hook">
+      <UniqueIdentifier>{C41F2F86-84ED-3A86-B880-F29ED4374D56}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\engine\input">
+      <UniqueIdentifier>{C616FE1C-A194-3325-8B12-EF4053D707B6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\engine\storage">
+      <UniqueIdentifier>{F8B8D842-4810-30E6-805C-B54C839BC7CC}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\engine\ui">
+      <UniqueIdentifier>{01991E62-FF30-3C93-981E-23DE09A9DD5A}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\game">
+      <UniqueIdentifier>{C55BFA67-F069-3D46-8B30-3DF3E9C35AB8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\runtime">
+      <UniqueIdentifier>{4E4AA251-DFF8-300D-B053-9C22BE04E2CC}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
