@@ -156,6 +156,13 @@ if(CMAKE_SIZEOF_VOID_P EQUAL 4)
         endif()
         get_filename_component(wxl_ext_name "${wxl_ext_dir}" NAME)
         file(GLOB_RECURSE WXL_EXT_SRC CONFIGURE_DEPENDS "${wxl_ext_dir}/*.cpp")
+
+        # server/ trees (e.g. extensions/*/server/azerothcore/...) are the matching emulator-side
+        # module for a client extension -- built into an AzerothCore checkout's own CMake project, not
+        # this one. They target AzerothCore headers (Group.h, etc.) that don't exist here, so the
+        # client-side DLL glob must not sweep them in.
+        list(FILTER WXL_EXT_SRC EXCLUDE REGEX "/server/")
+
         if(NOT WXL_EXT_SRC)
             continue()
         endif()
@@ -174,6 +181,12 @@ if(CMAKE_SIZEOF_VOID_P EQUAL 4)
         target_include_directories(${wxl_ext_name} PRIVATE
             "${CMAKE_CURRENT_SOURCE_DIR}/include"
             "${CMAKE_CURRENT_SOURCE_DIR}/src")
+        # An extension's own src/ is its own include root for its self-contained internal headers
+        # (e.g. wxl-modern-render's own "core/Logger.hpp", "gpu/Effect.hpp") -- distinct from the core
+        # SDK's src/ added above, and only added when the extension actually has such a tree.
+        if(IS_DIRECTORY "${wxl_ext_dir}/src")
+            target_include_directories(${wxl_ext_name} PRIVATE "${wxl_ext_dir}/src")
+        endif()
         # WXL_EXTENSION is what makes PluginApi.h declare the two entry points as exports. It belongs on
         # the target rather than in a source file: an extension that forgets it still builds, and fails
         # only at load with "exports no WXL_Query/WXL_Load".
