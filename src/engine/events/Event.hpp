@@ -109,8 +109,19 @@ namespace wxl::events
     /**
      * @brief Args for OnWorldRenderEnd: the world -> UI boundary of the frame. A subscriber draws
      *        post-world effects here, before the client renders the interface on top.
+     *
+     * superSampleSource, depthSource and proj are reserved for a render-scale / readable-depth hook
+     * that does not exist yet: they are always null today, so a subscriber must treat null as the
+     * normal case (no supersampling active; no depth-using effect got one; use the world's own
+     * projection) rather than as a missing feature to work around.
      */
-    struct WorldRenderEndArgs { void* device; };
+    struct WorldRenderEndArgs
+    {
+        void* device;
+        void* superSampleSource = nullptr; // render-size offscreen world color when supersampling is on, else null
+        void* depthSource       = nullptr; // sampleable (INTZ) world depth when requested and available, else null
+        const float* proj       = nullptr; // projection override (e.g. a glue-screen boundary), else null
+    };
     /**
      * @brief Args for OnWorldSceneEnd: the world is drawn and the camera matrices that drew it are
      *        still on the device. Its caller puts the pre-world projection and view back immediately

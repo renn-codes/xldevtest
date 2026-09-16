@@ -17,7 +17,7 @@
 #include "SmaaEffect.hpp"
 
 #include "gpu/Framework.hpp"
-#include "common/Log.hpp"
+#include "ExtensionApi.hpp"
 
 // Vendored SMAA (Jimenez et al., MIT). The algorithm header is embedded as compiler-safe chunks; the
 // precomputed lookup tables ship as plain C byte arrays and are included directly.

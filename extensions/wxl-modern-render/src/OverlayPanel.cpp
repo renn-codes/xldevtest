@@ -14,7 +14,7 @@
 // You should have received a copy of the GNU General Public License
 // along with this program. If not, see <https://www.gnu.org/licenses/>.
 
-#include "overlay/Panels.hpp"
+#include "ExtensionApi.hpp"
 #include "gpu/Pipeline.hpp"
 #include "gpu/Proxy.hpp"
 
@@ -29,7 +29,7 @@ namespace wxl::scripts::render_modern
     {
         const char* const k_qualityNames[] = { "Low", "Medium", "High", "Ultra" };
 
-        void DrawGraphicsPanel()
+        void __cdecl DrawGraphicsPanel(void* /*user*/)
         {
             const auto& effects = Pipeline::Get().Effects();
             if (effects.empty())
@@ -94,11 +94,11 @@ namespace wxl::scripts::render_modern
                 WxlSetSsaaFactor((float)pct / 100.0f);
             }
         }
-
-        // File-scope registration: adds the panel at DLL load, before the overlay first draws.
-        struct PanelRegistrar
-        {
-            PanelRegistrar() { wxl::overlay::RegisterPanel("Graphics", &DrawGraphicsPanel); }
-        } g_panelRegistrar;
     }
+}
+
+bool wxl_modern_render::InstallOverlayPanel()
+{
+    g_api->UiAddPanel("Graphics", &wxl::scripts::render_modern::DrawGraphicsPanel, nullptr);
+    return true;
 }

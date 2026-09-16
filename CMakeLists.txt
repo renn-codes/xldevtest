@@ -128,8 +128,12 @@ if(CMAKE_SIZEOF_VOID_P EQUAL 4)
     set_target_properties(d3d9 PROPERTIES OUTPUT_NAME "d3d9" PREFIX "")
     target_include_directories(d3d9 PRIVATE "${CMAKE_CURRENT_SOURCE_DIR}/src")
     # The proxy shadows a static import of Wow.exe, so a hard dependency of the proxy is a hard
-    # dependency of the game. It resolves the system d3d9 at runtime and links nothing beyond the CRT.
+    # dependency of the game. It resolves the system d3d9 (and, when present, d3d9on12.dll) at runtime
+    # via LoadLibrary rather than a static import, so neither missing is a load-time failure; d3d12 is
+    # linked statically since it has shipped with every Windows 10 release since RTM (this project's
+    # stated minimum target), unlike the two runtime-probed DLLs above.
     target_link_options(d3d9 PRIVATE "/DEF:${CMAKE_CURRENT_SOURCE_DIR}/src/engine/gpu/Proxy.def")
+    target_link_libraries(d3d9 PRIVATE d3d12)
     target_compile_definitions(d3d9 PRIVATE ${WXL_DEFS})
 
     # Deploy: copy the freshly linked proxy into the client folder after every build.
